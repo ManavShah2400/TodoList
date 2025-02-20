@@ -1,0 +1,32 @@
+.dialogPane{
+    -fx-padding: 20px;
+}
+
+MFXButton{
+    -fx-background-color: #6200EE;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0,0);
+}
+
+MFXButton:hover{
+    -fx-background-color: #5a00d9;
+}
+
+TextArea{
+     -fx-font-size: 15px;
+     -fx-focus-color: #6200EE;
+     -fx-background-radius: 8px;
+}
+
+.deleteButton{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+.cancelButton{
+    -fx-background-color: #666;
+}

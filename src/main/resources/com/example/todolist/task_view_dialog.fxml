@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.todolist.Controller.TaskViewDialogController"
+      prefHeight="400.0" prefWidth="400.0"
+      spacing="10" alignment="CENTER" styleClass="dialogPane">
+    <Label text="View Task" styleClass="viewTaskTitle"/>
+    <HBox spacing="10">
+        <MFXTextField fx:id="taskTitleField" promptText="Task Title" floatingText="Title" prefWidth="400"/>
+        <MFXComboBox prefHeight="30" fx:id="statusComboBox" promptText="All" prefWidth="400"/>
+    </HBox>
+    <TextArea fx:id="taskDescriptionField" promptText="Task Description"  wrapText="true" prefWidth="400" prefHeight="200"/>
+    <Label text="Comments"/>
+    <HBox spacing="10" style="-fx-padding: 10px;">
+        <MFXTextField fx:id="commentField" promptText="Add Comment" prefWidth="300"/>
+        <MFXButton text="Add" onAction="#handleAddComment" prefWidth="100"/>
+    </HBox>
+    <ScrollPane fitToWidth="true" fitToHeight="true" vbarPolicy="NEVER">
+         <VBox fx:id="commentList" spacing="5" prefHeight="300" prefWidth="400"/>
+    </ScrollPane>
+    <HBox spacing="10">
+        <Region HBox.hgrow="ALWAYS"/>
+        <MFXButton text="Delete" onAction="#handleDelete" styleClass="deleteButton"/>
+        <MFXButton text="Cancel" onAction="#handleCancel" styleClass="cancelButton"/>
+        <MFXButton text="Update" onAction="#handleUpdate"/>
+    </HBox>
+</VBox>

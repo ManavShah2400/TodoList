@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.virtualizedfx.flow.paginated.PaginatedVirtualFlow?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.todolist.Controller.TodoController"
+            prefHeight="600" prefWidth="400">
+    <VBox spacing="10" AnchorPane.leftAnchor="20" AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+    <HBox alignment="CENTER">
+        <Label text="TODO LIST" styleClass="title"/>
+    </HBox>
+    <HBox spacing="10">
+        <MFXButton text="Add Task" onAction="#handleAddTask" prefHeight="30"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <MFXComboBox prefHeight="30" fx:id="statusComboBox" promptText="All"/>
+    </HBox>
+        <ScrollPane fitToHeight="true" fitToWidth="true" vbarPolicy="AS_NEEDED" hbarPolicy="AS_NEEDED">
+            <VBox fx:id="taskListVBox" spacing="10" prefHeight="400"/>
+        </ScrollPane>
+    </VBox>
+</AnchorPane>
